@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigan Food</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
+
+        body {
+            background: url('https://ik.imagekit.io/tvlk/blog/2023/07/shutterstock_1522678766.jpg?tr=q-70,w-625,dpr-2') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Libre Franklin', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .button-container a,
+        .dropdown-btn {
+            margin: 0;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #ff6600;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-container a:hover,
+        .dropdown-btn:hover {
+            background-color: #cc5200;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dropdown-content input, .dropdown-content textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .dropdown-content button {
+            background-color: #ff6600;
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-content button:hover {
+            background-color: #cc5200;
+        }
+
+        .recipe-section {
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .recipe-box {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-image {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ingredients-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .ingredients-table th,
+        .ingredients-table td {
+            border: 1px solid #000000;
+            padding: 8px;
+        }
+
+        .steps h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .steps p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Local Vigan Specialties</h1>
+        <div class="button-container">
+            <a href="#breakfast">Longganisa na Hubad</a>
+            <a href="#lunch">Bagnet</a>
+            <a href="#dinner">Pinakbet with Bagnet</a>
+            <a href="#dessert">Royal Bibingka</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Submit Your Recipe</button>
+                <div class="dropdown-content">
+                    <form>
+                        <label for="recipe-name">Recipe Name:</label>
+                        <input type="text" id="recipe-name" name="recipe-name" required>
+
+                        <label for="ingredients">Ingredients:</label>
+                        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+                        <label for="steps">Steps:</label>
+                        <textarea id="steps" name="steps" rows="6" required></textarea>
+
+                        <button type="submit">Submit Recipe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="breakfast" class="recipe-section">
+            <div class="recipe-box">
+                <img src="https://i0.wp.com/www.foodwithmae.com/wp-content/uploads/2024/06/Vigan-Longganisa-Food-with-Mae-12.jpg?fit=2439%2C1986" alt="Breakfast" class="recipe-image">
+                <div class="recipe-details">
+                    <table class="ingredients-table">
+                        <tr><th>Ingredients</th></tr>
+                        <tr><td>(Wrapper) baking paper</td></tr>
+                        <tr><td>1kg minced pork</td></tr>
+                        <tr><td>20 garlic cloves</td></tr>
+                        <tr><td>60ml soy sauce</td></tr>
+                        <tr><td>40ml Ilocano vinegar (any vinegar)</td></tr>
+                        <tr><td>1tbsp. brown sugar</td></tr>
+                        <tr><td>2tbsps. black pepper</td></tr>
+                        <tr><td>2tbsps. annatto oil</td></tr>
+                        <tr><td>2tbsps. cooking oil</td></tr>
+                        <tr><td>5tbps. water</td></tr>
+                    </table>
+                    <div class="steps">
+                        <h2>Steps</h2>
+                        <p>1. Inside a large bowl, put together all of the ingredients. Make sure it's all mixed together. Afterwards, marinate the mixture for 1 hour or overnight.</p>
+                        <p>2. For the wrapper, cut your parchment/baking paper (cut to your preference).</p>
+                        <p>3. After marinating the meat, roll them into the parchement/baking paper you've cut (make sure to roll the meat on each end). Put the rolls in a container like a tupperware or bag and freeze overnight to keep the rolls' shape.</p>
+                        <p>4. When frying the longganisa, unwrap the rolls and place it into the frying pan. Add a bit of water, just enough to cover the bottom of the pan and 2 tbsps. of cooking oil. Put the lid on and let them cook on medium heat (the water should be dissolved). Fry each side of the longganisa until they're golden brown.</p>
+                        <p>5. Prepare the longganisa in a sausage bun or with garlic rice and fried eggs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="lunch" class="recipe-section">
+            <div class="recipe-box">
+                <img src="https://pilipinasrecipes.com/wp-content/uploads/2017/06/Bagnet-Recipe.jpg" alt="Lunch" class="recipe-image">
+                <div class="recipe-details">
+                    <table class="ingredients-table">
+                        <tr><th>Ingredients</th></tr>
+                        <tr><td>1/2 kilo pork liempo (pork belly) whole</td></tr>
+                        <tr><td>1/2 head garlic</td></tr>
+                        <tr><td>1 tsp. peppercorns</td></tr>
+                        <tr><td>2 tbsps. salt</td></tr>
+                        <tr><td>1 bay leaves</td></tr>
+                        <tr><td>Cooking oil</td></tr>
+                        <tr><td>1/4 cup patis</td></tr>
+                    </table>
+                    <div class="steps">
+                        <h2>Steps</h2>
+                        <p>1. Place the pork in a deep pot and add enough water to cover it. Add salt, crushed garlic, black pepper, and bay leaves. Bring it to a boil, then let it simmer for 45 minutes or until the pork is tender.</p>
+                        <p>2. Remove the pork from the pot and let it sit to drain. Use a fork to poke the skin all over. Refrigerate the pork for several hours.</p>
+                        <p>3. Heat oil in a deep pan and fry the pork until it turns brown. While frying, poke the skin to create bubbles, making it crispy. Remove the pork and pat it dry with a paper towel to absorb excess oil.</p>
+                        <p>4. Reheat the same oil and fry the pork again. Repeat this process until the skin becomes crispy and blistered. Once done, drain the pork and pat it dry again.</p>
+                        <p>5. Cut the bagnet into pieces and serve immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dinner" class="recipe-section">
+            <div class="recipe-box">
+                <img src="https://i0.wp.com/whattoeatph.com/wp-content/uploads/2020/06/DSC_0393-2.jpg?fit=4035%2C2690&ssl=1" alt="Dinner" class="recipe-image">
+                <div class="recipe-details">
+                    <table class="ingredients-table">
+                        <tr><th>Ingredients</th></tr>
+                        <tr><td>1 tbsp. canola oil</td></tr>
+                        <tr><td>1 onion (peeled and chopped)</td></tr>
+                        <tr><td>2 garlic cloves (peeled and minced)</td></tr>
+                        <tr><td>2 tbsps. fish sauce</td></tr>
+                        <tr><td>2 large tomatoes (chopped)</td></tr>
+                        <tr><td>1 1/2 cups of water</td></tr>
+                        <tr><td>1/2 small kalabasa (peeled and cut)</td></tr>
+                        <tr><td>8 okra (trim ends)</td></tr>
+                        <tr><td>1/2 sitaw (trim ends and cut into 3-incg lengths)</td></tr>
+                        <tr><td>1 large bitter melon (seeded, halved, and cut 1-inch thick)</td></tr>
+                        <tr><td>Salt and pepper (to taste)</td></tr>
+                        <tr><td>2 cups lenchon kawali (cut into 1 1/2-inch pieces)</td></tr>
+                    </table>
+                    <div class="steps">
+                        <h2>Steps</h2>
+                        <p>1. Heat oil in a pot over medium heat. Sauté onions and garlic, stirring regularly, until softened.</p>
+                        <p>2. Add tomatoes and cook, mashing them with a spoon until they soften and release their juices. Stir in fish sauce and cook for 1 to 2 minutes.</p>
+                        <p>3. Pour in water and bring to a boil. Add kalabasa and cook for 2 minutes. Then, add okra, long beans, bitter melon, and eggplant. Cook for 4 to 5 minutes or until the vegetables are tender but still crisp.</p>
+                        <p>4. Season with salt and pepper to taste. Add lechon kawali and gently mix until heated through. Serve hot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dessert" class="recipe-section">
+            <div class="recipe-box">
+                <img src="https://yummykitchentv.com/wp-content/uploads/2023/11/SPECIAL-ROYAL-BIBINGKA_RESIZED3-800x530.jpg" alt="Dessert" class="recipe-image">
+                <div class="recipe-details">
+                    <table class="ingredients-table">
+                        <tr><th>Ingredients</th></tr>
+                        <tr><td>2 cups rice flour</td></tr>
+                        <tr><td>1 cup sugar</td></tr>
+                        <tr><td>1/2 cup milk</td></tr>
+                        <tr><td>2 cups coconut milk</td></tr>
+                        <tr><td>1/2 cup coconut strips</td></tr>
+                        <tr><td>3 eggs</td></tr>
+                        <tr><td>Cheese</td></tr>
+                        <tr><td>(topping) Extra sugar</td></tr>
+                        <tr><td>Butter</td></tr>
+                    </table>
+                    <div class="steps">
+                        <h2>Steps</h2>
+                        <p>1. In a bowl, mix glutinous rice flour, sugar, milk, coconut milk, and eggs until the batter is smooth. Stir in the coconut strips and combine well. Set aside.</p>
+                        <p>2. Grease a baking pan or muffin pan with softened butter. Pour the batter into the pan, leaving 1–2 cm of space at the top. Cover with foil.</p>
+                        <p>3. Preheat the oven to 160°C (300°F) and bake for 10 to 15 minutes. Once done, brush the top with melted butter, then sprinkle sugar and grated cheese.</p>
+                        <p>4. Return the pan to the oven and bake for another 10 to 15 minutes, or until the top is golden brown. Let it cool to room temperature before removing from the mold.</p>
+                        <p>5. Serve and enjoy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
